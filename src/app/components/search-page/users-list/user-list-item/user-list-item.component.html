@@ -1,0 +1,17 @@
+<div class="users-item-container">
+	<div class="users-item-block service">
+		<div class="service__wraper-image">
+			<img [src]="userData.avatarLink" alt="" class="service__image">
+		</div>
+		<div class="service-description">
+			<span class="service__name">{{userData.name}}</span>
+			<div class="service-info">
+				<div class="service__contact">
+					<span class="service__number">{{userData.phone}}</span>
+					<span class="service__price">{{userData.price}}</span>
+				</div>
+				<span class="service__location"><a class="service__location--link" href="" *ngFor="let city of userData.cities">{{city}}</a></span>
+			</div>
+		</div>
+	</div>
+</div>

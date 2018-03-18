@@ -1,0 +1,87 @@
+@import "../../global";
+*{
+	font-family: "Roboto", sans-serif;
+}
+.header{
+	&-container{
+		background-color: $mainBlack;
+		font-size: 14px;
+	}
+	&-wraper{
+		width:75%;
+		margin:0 auto;
+		display: flex;
+	}
+	&-logo{
+		display: flex;
+		justify-content:center;
+		align-items:center;
+		text-decoration: none;
+		&__image{
+			margin:0 10px;
+			width:32px;
+			height:32px;
+		}
+		&__title{
+			font-weight: lighter;
+			text-transform: uppercase;
+			color:white;
+			font-size: 20px;
+		}
+	}
+	&-navigation{
+		margin: 0 30px;
+		flex-grow:4;
+		align-self:flex-start;
+		&__item{
+			font-weight: lighter;
+			margin:0;
+			padding:0;
+			display: flex;
+			justify-content:flex-start;
+			align-items:flex-start;
+			list-style:none;
+		}
+	}
+	&-auth{
+		display: flex;
+		justify-content:center;
+		align-items:center;
+		text-transform: uppercase;
+		float:right;
+		&__enter{
+			text-decoration: none;
+			color:$textNavigation;
+			&:hover{
+				color:white;
+			}
+		}
+		&__register{
+			margin:0 30px;
+			border:none;
+			background-color: $mainPink;
+			color:white;
+			padding:5px 15px;
+			border-radius:3px;
+		}
+	}
+}
+.navigation{
+	&__item{
+
+		&-link{
+			display: block;
+			padding:15px 20px;
+			color:$textNavigation;
+			text-decoration: none;
+			&:hover{
+				background-color: #3E404B;
+				color:white;
+			}
+		}
+
+	}
+}
+.navigation__item-link--selected{
+	border-bottom:3px solid $mainPink;
+}

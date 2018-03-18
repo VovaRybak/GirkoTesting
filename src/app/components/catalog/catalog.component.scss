@@ -1,0 +1,35 @@
+@import "../../global";
+*{
+	font-family: 'Roboto', sans-serif;
+}
+.catalog{
+	&-wraper{
+		width:75%;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin: 50px auto;
+	}
+	&-container{
+		padding:50px;
+		box-sizing:border-box;
+		background-color: $mainGrey;
+	}
+	&-header{
+		color:$textMain;
+		display: flex;
+		flex-direction:column;
+		justify-content: center;
+		align-items: center;
+		font-weight: 300;
+		line-height: .75;
+		font-size: 18px;
+
+	}
+	&-title{
+		font-weight: 300;
+		font-size: 30px;
+		margin:0px;
+		box-sizing:border-box;
+	}
+}

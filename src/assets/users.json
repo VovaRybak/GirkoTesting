@@ -1,0 +1,204 @@
+{
+	"users":[
+				{
+					"id":1,
+					"category":"Фотографи",
+					"short_category":"photo",
+					"name":"Юрій Бочко",
+					"cities":["Львів","Луцьк", "Рівне"],
+					"avatarLink":"assets/1/avatar.jpg",
+					"phone": "(093) 154-69-07",
+					"price": "від 12000"					
+				},
+				{
+					"id":2,
+					"category":"Фотографи",
+					"short_category":"photo",
+					"name":"Василь Зорена",
+					"cities":["Львів","Київ", "Тернопіль"],
+					"avatarLink":"assets/2/avatar.jpg",
+					"phone": "(093) 154-69-07",
+					"price": "від 12000"
+				},
+				{
+					"id":3,
+					"category":"Фотографи",
+					"short_category":"photo",
+					"name":"Назар Лунів",
+					"cities":["Львів","Івано-Франківськ", "Тернопіль"],
+					"avatarLink":"assets/3/avatar.jpg",
+					"phone": "(093) 154-69-07",
+					"price": "від 12000"
+				},
+				{
+					"id":4,
+					"category":"Фотографи",
+					"short_category":"photo",
+					"name":"Володимир Веретельник",
+					"cities":["Львів"],
+					"avatarLink":"assets/4/avatar.jpg",
+					"phone": "(093) 154-69-07",
+					"price": "від 12000"
+				},
+				{ 
+					"id":5,
+					"category":"Відеооператори",
+					"short_category":"video",
+					"name":"GOODzyk production",
+					"cities":["Львів","Тернопіль", "Івано-Франківськ"],
+					"avatarLink":"assets/5/avatar.jpg",
+					"phone": "(093) 154-69-07",
+					"price": "від 12000"
+				},
+				{
+					"id":6,
+					"category":"Відеооператори",
+					"short_category":"video",
+					"name":"AMUR STUDIO",
+					"cities":["Львів","Тернопіль", "Івано-Франківськ"],
+					"avatarLink":"assets/6/avatar.jpg",
+					"phone": "(093) 154-69-07",
+					"price": "від 12000"
+				},
+				{
+					"id":7,
+					"category":"Відеооператори",
+					"short_category":"video",
+					"name":"E-Furor Production",
+					"cities":["Львів","Івано-Франківськ", "Тернопіль"],
+					"avatarLink":"assets/7/avatar.jpg",
+					"phone": "(093) 154-69-07",
+					"price": "від 12000"
+				},
+				{
+					"id":8,
+					"category":"Музиканти",
+					"short_category":"music",
+					"name":"Гурт 'Всьо Чотко!'",
+					"cities":["Львів","Тернопіль", "Івано-Франківськ"],
+					"avatarLink":"assets/8/avatar.jpg",
+					"phone": "(093) 154-69-07",
+					"price": "від 12000"
+				},
+				{
+					"id":9,
+					"category":"Музиканти",
+					"short_category":"music",
+					"name":"Гурт 'Одна Любов'",
+					"cities":["Львів","Тернопіль", "Івано-Франківськ"],
+					"avatarLink":"assets/9/avatar.jpg",
+					"phone": "(093) 154-69-07",
+					"price": "від 12000"
+				},
+				{
+					"id":10,
+					"category":"Музиканти",
+					"short_category":"music",
+					"name":"Гурт 'Дві зорі'",
+					"cities":["Львів","Тернопіль", "Івано-Франківськ"],
+					"avatarLink":"assets/10/avatar.jpg",
+					"phone": "(093) 154-69-07",
+					"price": "від 12000"
+				},
+				{
+					"id":11,
+					"category":"Ведучі",
+					"short_category":"tamada",
+					"name":"Назар Голоджун",
+					"cities":["Львів","Тернопіль", "Київ"],
+					"avatarLink":"assets/11/avatar.jpg",
+					"phone": "(093) 154-69-07",
+					"price": "від 12000"
+				},
+				{
+					"id":12,
+					"category":"Ведучі",
+					"short_category":"tamada",
+					"name":"Андрій Рибак",
+					"cities":["Львів","Київ", "Чернівці"],
+					"avatarLink":"assets/12/avatar.jpg",
+					"phone": "(093) 154-69-07",
+					"price": "від 12000"
+				},
+				{
+					"id":13,
+					"category":"Ведучі",
+					"short_category":"tamada",
+					"name":"Віктор Гевко",
+					"cities":["Львів","Тернопіль"],
+					"avatarLink":"assets/13/avatar.jpg",
+					"phone": "(093) 154-69-07",
+					"price": "від 12000"
+				},
+				{
+					"id":14,
+					"category":"Фотографи",
+					"short_category":"photo",
+					"name":"Аріна Козловська",
+					"cities":["Львів"],
+					"avatarLink":"assets/14/avatar.jpg",
+					"phone": "(093) 154-69-07",
+					"price": "від 12000"					
+				},
+				{
+					"id":15,
+					"category":"Фотографи",
+					"short_category":"photo",
+					"name":"Любомир Ворона",
+					"cities":["Львів","Київ", "Тернопіль"],
+					"avatarLink":"assets/15/avatar.jpg",
+					"phone": "(093) 154-69-07",
+					"price": "від 12000"
+				},
+				{
+					"id":16,
+					"category":"Фотографи",
+					"short_category":"photo",
+					"name":"Сергій Соборайчук",
+					"cities":["Львів","Івано-Франківськ", "Тернопіль"],
+					"avatarLink":"assets/16/avatar.jpg",
+					"phone": "(093) 154-69-07",
+					"price": "від 12000"
+				},
+				{
+					"id":17,
+					"category":"Фотографи",
+					"short_category":"photo",
+					"name":"Terletsky family",
+					"cities":["Львів"],
+					"avatarLink":"assets/17/avatar.jpg",
+					"phone": "(093) 154-69-07",
+					"price": "від 12000"
+				},
+				{
+					"id":18,
+					"category":"Фотографи",
+					"short_category":"photo",
+					"name":"Тетяна Кірчук",
+					"cities":["Львів","Луцьк", "Рівне"],
+					"avatarLink":"assets/18/avatar.jpg",
+					"phone": "(093) 154-69-07",
+					"price": "від 12000"					
+				},
+				{
+					"id":19,
+					"category":"Фотографи",
+					"short_category":"photo",
+					"name":"Дмитро Лисюк",
+					"cities":["Львів","Київ", "Тернопіль"],
+					"avatarLink":"assets/19/avatar.jpg",
+					"phone": "(093) 154-69-07",
+					"price": "від 12000"
+				},
+				{
+					"id":20,
+					"category":"Фотографи",
+					"short_category":"photo",
+					"name":"Віктор Кудашов",
+					"cities":["Львів","Івано-Франківськ", "Тернопіль"],
+					"avatarLink":"assets/20/avatar.jpg",
+					"phone": "(093) 154-69-07",
+					"price": "від 12000"
+				}
+	]
+}

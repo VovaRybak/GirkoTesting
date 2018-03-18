@@ -1,0 +1,18 @@
+<div class="catalog-item-container">
+	<div class="catalog-item-header header">
+		<span class="header__icon"><img [src]="catalogItem.logo" alt="" class="header__icon-image"></span>
+		<span class="header__title">{{ catalogItem.category }}</span>
+	</div>
+	<div class="catalog-item__image-wraper">
+		<img [src]="catalogItem.image" alt="" class="catalog-item__image">
+	</div>
+	<div class="catalog-item__user user" *ngFor='let user of usersData | slice:0:3;'>
+		<img class="user__image" [src]="user.avatarLink" alt="">
+		<div class="user__data">
+			<span class="user__name">{{user.name}}</span>
+			<div class="user__wraper-location">
+				<span class="user__location">{{showLocation(user.cities)}}</span>
+			</div>
+		</div>
+	</div>
+</div>

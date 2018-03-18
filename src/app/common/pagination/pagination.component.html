@@ -1,0 +1,3 @@
+<div class="pagination-wraper">
+	<a href="" class="pagination__page" *ngFor="let number of numbers; let i of index" [ngClass]="{'pagination__page--active': activePage===i}" routerLinkActive="pagination__page--active" routerLink="/search" [queryParams]="{category: category,page: number}"> {{number}} </a>
+</div>

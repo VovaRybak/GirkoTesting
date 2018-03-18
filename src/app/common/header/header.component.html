@@ -1,0 +1,21 @@
+<header class="header-container">
+	<div class="header-wraper">
+		<a href="" class="header-logo" [routerLink]="['home']">
+			<img src="assets/logo.svg" alt="" class="header-logo__image">
+			<span class="header-logo__title">Girko</span>
+		</a>
+		<nav class="header-navigation">
+			<ul class="navigation header-navigation__item">
+				<li class="navigation__item"><a href="" class="navigation__item-link" routerLinkActive="navigation__item-link--selected" routerLink="/search" [queryParams]="{category: 'photo'}">Фотографи</a></li>
+				<li class="navigation__item"><a href="" class="navigation__item-link" routerLinkActive="navigation__item-link--selected" routerLink="/search" [queryParams]="{category: 'video'}">Відеооператори</a></li>
+				<li class="navigation__item"><a href="" class="navigation__item-link" routerLinkActive="navigation__item-link--selected" routerLink="/search" [queryParams]="{category: 'music'}">Музиканти</a></li>
+				<li class="navigation__item"><a href="" class="navigation__item-link" routerLinkActive="navigation__item-link--selected" routerLink="/search" [queryParams]="{category: 'tamada'}">Тамада</a></li>
+				<li class="navigation__item"><a href="" class="navigation__item-link" routerLinkActive="navigation__item-link--selected" routerLink="/search" [queryParams]="{category: 'restaurant'}">Ресторани</a></li>
+			</ul>
+		</nav>
+		<div class="header-auth">
+			<a href="" class="header-auth__enter">Вхід</a>
+			<button class="header-auth__register">Реєстрація</button>
+		</div>
+	</div>
+</header>

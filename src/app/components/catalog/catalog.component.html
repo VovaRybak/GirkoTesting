@@ -1,0 +1,10 @@
+<div class="catalog-container">
+	<div class="catalog-header">
+		<h2 class="catalog-title">Каталог весільних послуг</h2>
+		<p class="catalog-amount">6968 професіоналів із 24 міст України.</p>
+		<span class="catalog-cyta">Плануйте весілля разом з нами</span>
+	</div>
+	<div class="catalog-wraper">
+		<app-catalog-item *ngFor="let localCat of catalogItems" [catalogItem] = "localCat"></app-catalog-item>
+	</div>
+</div>

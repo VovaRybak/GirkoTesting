@@ -1,0 +1,11 @@
+<div class="container">
+	<div class="users-list-container">
+		
+
+		<div class="users-list__title">{{usersCategory}} на весілля в Україні</div>
+		<div class="user-list-wraper">
+			<app-user-list-item class="user-list__item" *ngFor='let user of usersData' [userData]="user"></app-user-list-item>
+		</div>
+		<app-pagination [category]='pageCategory' [itemsAmount] = 'amountItems' [perPage]='5'></app-pagination>
+	</div>
+</div>

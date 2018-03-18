@@ -1,0 +1,26 @@
+@import "../../../global";
+
+*{
+	font-family: 'Roboto',sans-serif;
+}
+.user-list__item{
+	width:calc(100%/4);
+	margin: 10px 0;
+}
+.container{
+	background-color: $mainGrey;
+}
+.users-list-container{
+	padding:20px;
+	width:calc(70%);
+	margin:0 auto;
+}
+.user-list-wraper{
+	display: flex;
+	flex-wrap:wrap;
+}
+.users-list__title{
+	font-size: 28px;
+	color:$textMain;
+	margin-bottom:20px;
+}

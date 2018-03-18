@@ -1,0 +1,29 @@
+@import "../../global";
+
+.pagination{
+	&-wraper{
+		margin:0 auto;
+		display: flex;
+		justify-content:center;
+		align-items:center;
+	}
+	&__page{
+		text-decoration: none;
+		display: flex;
+		align-items:center;
+		justify-content:center;
+		color:$textMain;
+		border:1px solid $textMain;
+		width:40px;
+		height:40px;
+		font-size: 16px;
+		border-radius:3px;
+		background-color: transparent;
+		margin:0 3px;
+	}
+	&__page--active{
+		border:none;
+		background-color: $mainGreen;
+		color:white;
+	}
+}
