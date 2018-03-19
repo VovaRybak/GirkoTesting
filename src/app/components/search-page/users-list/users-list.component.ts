@@ -12,6 +12,8 @@ export class UsersListComponent implements OnInit {
   usersCategory;
   pageCategory;
   amountItems;
+  currentPage;
+  perPage;
   constructor(private usersService:UsersService, private route: ActivatedRoute) { }
 
   ngOnInit() {	
@@ -26,13 +28,15 @@ export class UsersListComponent implements OnInit {
         this.usersData=users["users"]
         this.pageCategory = params.category;
 	      this.filterData(params.category);
-        this.chooseForPage(params.page);  
+        this.perPage = 8;
+        this.chooseForPage(params.page,this.perPage);  
         this.usersCategory = this.usersData[0].category; 
       });
   }
-  chooseForPage(page=1){
-    let startIndex = (page*5)-5;
-    this.usersData = this.usersData.slice(startIndex,startIndex+5);
+  chooseForPage(page=1,onPage){
+    this.currentPage = page;
+    let startIndex = (page*onPage)-onPage;
+    this.usersData = this.usersData.slice(startIndex,startIndex+onPage);
   }
   filterData(category){
     this.usersData = this.usersData.filter((object)=>{

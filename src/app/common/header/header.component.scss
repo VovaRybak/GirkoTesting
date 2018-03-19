@@ -1,4 +1,6 @@
 @import "../../global";
+@import "../../tooltip";
+
 *{
 	font-family: "Roboto", sans-serif;
 }
@@ -84,4 +86,6 @@
 }
 .navigation__item-link--selected{
 	border-bottom:3px solid $mainPink;
+	background-color: #3E404B;
+	color:white;
 }

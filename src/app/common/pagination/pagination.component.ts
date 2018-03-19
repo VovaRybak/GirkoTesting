@@ -6,9 +6,10 @@ import { UsersService } from '../../services/users.service';
   styleUrls: ['./pagination.component.scss']
 })
 export class PaginationComponent implements OnInit, OnChanges{
-@Input() perPage=5;
+@Input() perPage;
 @Input() itemsAmount;
 pagesAmount;
+@Input() currentPage;
 numbers = new Array(this.pagesAmount);
 @Input() category;
   constructor(private usersService:UsersService) { }
@@ -22,7 +23,7 @@ numbers = new Array(this.pagesAmount);
   initItems(amount,onPage){
   	this.pagesAmount = Math.ceil(amount/onPage);
   	this.numbers=Array.from(Array(this.pagesAmount).keys());
-  	this.numbers=this.numbers.map((value)=>value+=1;);
+  	this.numbers=this.numbers.map((value)=>value+=1);
   }
 
 }

@@ -6,16 +6,37 @@
 		</a>
 		<nav class="header-navigation">
 			<ul class="navigation header-navigation__item">
-				<li class="navigation__item"><a href="" class="navigation__item-link" routerLinkActive="navigation__item-link--selected" routerLink="/search" [queryParams]="{category: 'photo'}">Фотографи</a></li>
-				<li class="navigation__item"><a href="" class="navigation__item-link" routerLinkActive="navigation__item-link--selected" routerLink="/search" [queryParams]="{category: 'video'}">Відеооператори</a></li>
-				<li class="navigation__item"><a href="" class="navigation__item-link" routerLinkActive="navigation__item-link--selected" routerLink="/search" [queryParams]="{category: 'music'}">Музиканти</a></li>
-				<li class="navigation__item"><a href="" class="navigation__item-link" routerLinkActive="navigation__item-link--selected" routerLink="/search" [queryParams]="{category: 'tamada'}">Тамада</a></li>
-				<li class="navigation__item"><a href="" class="navigation__item-link" routerLinkActive="navigation__item-link--selected" routerLink="/search" [queryParams]="{category: 'restaurant'}">Ресторани</a></li>
+				<li class="navigation__item toolTip-holder">
+					<a href="" class="navigation__item-link" routerLinkActive="navigation__item-link--selected" routerLink="/search" [queryParams]="{category: 'photo'}">Фотографи</a>
+					<app-tooltip class="toolTip-item" [toolTipPosision]='"bottom-right"' [messageTitle]='"Категорія фотографи"' [messageText]='"Відображення списку фотографів для зйомки весілля"'></app-tooltip>
+				</li>
+				<li class="navigation__item toolTip-holder">
+					<a href="" class="navigation__item-link" routerLinkActive="navigation__item-link--selected" routerLink="/search" [queryParams]="{category: 'video'}">Відеооператори</a>
+					<app-tooltip class="toolTip-item" [toolTipPosision]='"bottom-right"' [messageTitle]='"Категорія відеооператори"' [messageText]='"Відображення списку відеооператорів для зйомки весілля"'></app-tooltip>
+				</li>
+				<li class="navigation__item toolTip-holder">
+					<a href="" class="navigation__item-link" routerLinkActive="navigation__item-link--selected" routerLink="/search" [queryParams]="{category: 'music'}">Музиканти</a>
+					<app-tooltip class="toolTip-item" [toolTipPosision]='"bottom-right"' [messageTitle]='"Категорія музиканти"' [messageText]='"Відображення списку музикантів для проведення весілля"'></app-tooltip>
+				</li>
+				<li class="navigation__item toolTip-holder">
+					<a href="" class="navigation__item-link" routerLinkActive="navigation__item-link--selected" routerLink="/search" [queryParams]="{category: 'tamada'}">Тамада</a>
+					<app-tooltip class="toolTip-item" [toolTipPosision]='"bottom-right"' [messageTitle]='"Категорія тамада"' [messageText]='"Відображення списку ведучих та тамадів для проведення весілля"'></app-tooltip>
+				</li>
+				<li class="navigation__item toolTip-holder">
+					<a href="" class="navigation__item-link" routerLinkActive="navigation__item-link--selected" routerLink="/search" [queryParams]="{category: 'restaurant'}">Ресторани</a>
+					<app-tooltip class="toolTip-item" [toolTipPosision]='"bottom-right"' [messageTitle]='"Категорія ресторани"' [messageText]='"Відображення списку закладів для проведення весілля"'></app-tooltip>
+				</li>
 			</ul>
 		</nav>
 		<div class="header-auth">
-			<a href="" class="header-auth__enter">Вхід</a>
-			<button class="header-auth__register">Реєстрація</button>
+			<a href="" class="header-auth__enter toolTip-holder">
+				Вхід
+				<app-tooltip class="toolTip-item" [toolTipPosision]='"bottom-left"' [messageTitle]='"Авторизація"' [messageText]='"Здійснення входу в власний обліковий запис"'></app-tooltip>
+			</a>
+			<button class="header-auth__register toolTip-holder">
+				Реєстрація
+				<app-tooltip class="toolTip-item" [toolTipPosision]='"bottom-left"' [messageTitle]='"Реєстрація"' [messageText]='"Створення власного облікового запису"'></app-tooltip>
+			</button>
 		</div>
 	</div>
 </header>

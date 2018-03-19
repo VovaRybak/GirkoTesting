@@ -16,6 +16,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { UsersListComponent } from './components/search-page/users-list/users-list.component';
 import { UserListItemComponent } from './components/search-page/users-list/user-list-item/user-list-item.component';
 import { PaginationComponent } from './common/pagination/pagination.component';
+import { TooltipComponent } from './common/tooltip/tooltip.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { PaginationComponent } from './common/pagination/pagination.component';
     SearchPageComponent,
     UsersListComponent,
     UserListItemComponent,
-    PaginationComponent
+    PaginationComponent,
+    TooltipComponent
   ],
   imports: [
     BrowserModule,

@@ -1,19 +1,21 @@
 <div class="filter-container">
 	<div class="filter-wraper">
 		<div class="filter-block">
-			<div class="filter-block__category filter-select">
+			<div class="filter-block__category filter-select toolTip-holder">
+				<app-tooltip class="toolTip-item" [toolTipPosision]='"bottom-left"' [messageTitle]='"Критерій категорія"' [messageText]='"Відбір користувачів по роду діяльності"'></app-tooltip>
 				<select type="text" class="filter-select__list">
 					<option value="" disabled selected>Оберіть категорію</option>
 					<option value="" *ngFor='let category of categorysList' class="filter-select__list-item">{{category}}</option>
 				</select>
 			</div>
-			<div class="filter-block__city filter-select">
-				<select type="text" class="filter-select__list">
+			<div class="filter-block__city filter-select toolTip-holder">
+				<app-tooltip class="toolTip-item" [toolTipPosision]='"bottom-right"' [messageTitle]='"Критерій місто"' [messageText]='"Відбір користувачів по місту роботи"'></app-tooltip>
+				<select type="text" class="filter-select__list">					
 					<option value="" disabled selected>Оберіть місто</option>
 					<option value="" *ngFor='let city of citysList' class="filter-select__list-item">{{city}}</option>
 				</select>
 			</div>
-			<button (click)="onSearch()" class="filter-block__button">Пошук</button>
+			<button (click)="onSearch()" class="filter-block__button toolTip-holder"><app-tooltip class="toolTip-item" [toolTipPosision]='"top-right"' [messageTitle]='"Кнопка пошук"' [messageText]='"Здійснення пошуку"'></app-tooltip>Пошук</button>
 		</div>
 	</div>
 </div>
