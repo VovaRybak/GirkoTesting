@@ -8,7 +8,9 @@
 					"cities":["Львів","Луцьк", "Рівне"],
 					"avatarLink":"assets/users/1/avatar.jpg",
 					"phone": "(093) 154-69-07",
-					"price": "від 12000"					
+					"price": "від 12000",
+					"likes": 385,
+					"pro": false
 				},
 				{
 					"id":2,
@@ -18,7 +20,9 @@
 					"cities":["Львів","Київ", "Тернопіль"],
 					"avatarLink":"assets/users/2/avatar.jpg",
 					"phone": "(093) 154-69-07",
-					"price": "від 12000"
+					"price": "від 12000",
+					"likes": 431,
+					"pro": true
 				},
 				{
 					"id":3,
@@ -28,7 +32,9 @@
 					"cities":["Львів","Івано-Франківськ", "Тернопіль"],
 					"avatarLink":"assets/users/3/avatar.jpg",
 					"phone": "(093) 154-69-07",
-					"price": "від 12000"
+					"price": "від 12000",
+					"likes": 711,
+					"pro": false
 				},
 				{
 					"id":4,
@@ -38,7 +44,9 @@
 					"cities":["Львів"],
 					"avatarLink":"assets/users/4/avatar.jpg",
 					"phone": "(093) 154-69-07",
-					"price": "від 12000"
+					"price": "від 12000",
+					"likes": 731,
+					"pro": true
 				},
 				{ 
 					"id":5,
@@ -48,7 +56,9 @@
 					"cities":["Львів","Тернопіль", "Івано-Франківськ"],
 					"avatarLink":"assets/users/5/avatar.jpg",
 					"phone": "(093) 154-69-07",
-					"price": "від 12000"
+					"price": "від 12000",
+					"likes": 236,
+					"pro": false
 				},
 				{
 					"id":6,
@@ -58,7 +68,9 @@
 					"cities":["Львів","Тернопіль", "Івано-Франківськ"],
 					"avatarLink":"assets/users/6/avatar.jpg",
 					"phone": "(093) 154-69-07",
-					"price": "від 12000"
+					"price": "від 12000",
+					"likes": 124,
+					"pro": true
 				},
 				{
 					"id":7,
@@ -68,7 +80,9 @@
 					"cities":["Львів","Івано-Франківськ", "Тернопіль"],
 					"avatarLink":"assets/users/7/avatar.jpg",
 					"phone": "(093) 154-69-07",
-					"price": "від 12000"
+					"price": "від 12000",
+					"likes": 385,
+					"pro": false
 				},
 				{
 					"id":8,
@@ -78,7 +92,9 @@
 					"cities":["Львів","Тернопіль", "Івано-Франківськ"],
 					"avatarLink":"assets/users/8/avatar.jpg",
 					"phone": "(093) 154-69-07",
-					"price": "від 12000"
+					"price": "від 12000",
+					"likes": 622,
+					"pro": true
 				},
 				{
 					"id":9,
@@ -88,7 +104,9 @@
 					"cities":["Львів","Тернопіль", "Івано-Франківськ"],
 					"avatarLink":"assets/users/9/avatar.jpg",
 					"phone": "(093) 154-69-07",
-					"price": "від 12000"
+					"price": "від 12000",
+					"likes": 135,
+					"pro": false
 				},
 				{
 					"id":10,
@@ -98,7 +116,9 @@
 					"cities":["Львів","Тернопіль", "Івано-Франківськ"],
 					"avatarLink":"assets/users/10/avatar.jpg",
 					"phone": "(093) 154-69-07",
-					"price": "від 12000"
+					"price": "від 12000",
+					"likes": 364,
+					"pro": true
 				},
 				{
 					"id":11,
@@ -108,7 +128,9 @@
 					"cities":["Львів","Тернопіль", "Київ"],
 					"avatarLink":"assets/users/11/avatar.jpg",
 					"phone": "(093) 154-69-07",
-					"price": "від 12000"
+					"price": "від 12000",
+					"likes": 724,
+					"pro": true
 				},
 				{
 					"id":12,
@@ -118,7 +140,9 @@
 					"cities":["Львів","Київ", "Чернівці"],
 					"avatarLink":"assets/users/12/avatar.jpg",
 					"phone": "(093) 154-69-07",
-					"price": "від 12000"
+					"price": "від 12000",
+					"likes": 251,
+					"pro": false
 				},
 				{
 					"id":13,
@@ -128,7 +152,9 @@
 					"cities":["Львів","Тернопіль"],
 					"avatarLink":"assets/users/13/avatar.jpg",
 					"phone": "(093) 154-69-07",
-					"price": "від 12000"
+					"price": "від 12000",
+					"likes": 246,
+					"pro": true
 				},
 				{
 					"id":14,
@@ -138,7 +164,9 @@
 					"cities":["Львів"],
 					"avatarLink":"assets/users/14/avatar.jpg",
 					"phone": "(093) 154-69-07",
-					"price": "від 12000"					
+					"price": "від 12000",
+					"likes": 624,
+					"pro": false					
 				},
 				{
 					"id":15,
@@ -148,7 +176,9 @@
 					"cities":["Львів","Київ", "Тернопіль"],
 					"avatarLink":"assets/users/15/avatar.jpg",
 					"phone": "(093) 154-69-07",
-					"price": "від 12000"
+					"price": "від 12000",
+					"likes": 421,
+					"pro": false
 				},
 				{
 					"id":16,
@@ -158,7 +188,9 @@
 					"cities":["Львів","Івано-Франківськ", "Тернопіль"],
 					"avatarLink":"assets/users/16/avatar.jpg",
 					"phone": "(093) 154-69-07",
-					"price": "від 12000"
+					"price": "від 12000",
+					"likes": 123,
+					"pro": true
 				},
 				{
 					"id":17,
@@ -168,7 +200,9 @@
 					"cities":["Львів"],
 					"avatarLink":"assets/users/17/avatar.jpg",
 					"phone": "(093) 154-69-07",
-					"price": "від 12000"
+					"price": "від 12000",
+					"likes": 163,
+					"pro": false
 				},
 				{
 					"id":18,
@@ -178,7 +212,9 @@
 					"cities":["Львів","Луцьк", "Рівне"],
 					"avatarLink":"assets/users/18/avatar.jpg",
 					"phone": "(093) 154-69-07",
-					"price": "від 12000"					
+					"price": "від 12000",
+					"likes": 632,
+					"pro": true					
 				},
 				{
 					"id":19,
@@ -188,7 +224,9 @@
 					"cities":["Львів","Київ", "Тернопіль"],
 					"avatarLink":"assets/users/19/avatar.jpg",
 					"phone": "(093) 154-69-07",
-					"price": "від 12000"
+					"price": "від 12000",
+					"likes": 321,
+					"pro": false
 				},
 				{
 					"id":20,
@@ -198,7 +236,9 @@
 					"cities":["Львів","Івано-Франківськ", "Тернопіль"],
 					"avatarLink":"assets/users/20/avatar.jpg",
 					"phone": "(093) 154-69-07",
-					"price": "від 12000"
+					"price": "від 12000",
+					"likes": 385,
+					"pro": false
 				}
 	]
 }

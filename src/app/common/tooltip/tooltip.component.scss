@@ -2,13 +2,12 @@
 
 .toolTip{
 	&-container{
-		position:absolute;	
-		opacity: 0.7;	
+		position:absolute;		
 	}
 	&-container:after{
 		display: flex;
 		position:absolute;
-		color: $mainPink;
+		color: rgba(41,120,160,0.8);
 		width:15px;
 		font-size: 16px;
 		box-sizing: border-box;
@@ -16,7 +15,7 @@
 	}
 	&-box{
 		padding:5px 10px;
-		background-color: $mainPink;
+		background-color: rgba(41,120,160,0.8);
 		width:200px;
 		text-align:left;
 	}
@@ -39,7 +38,7 @@
 	}
 }
 .top{
-	&-after{
+	&-before{
 		bottom: 100%;
 		right: 50%;
 		margin-bottom: 15px;		
@@ -53,7 +52,7 @@
 			border-radius:5px 5px 0 5px;
 		}
 	}
-	&-before{
+	&-after{
 		bottom: 100%;
 		left: 50%;
 		margin-bottom: 15px;		
@@ -78,7 +77,7 @@
 		left: 50%;
 		margin-top: 15px;		
 		&:after{
-			top: -15px;
+			top: -16px;
 			left: 0px;
 			content: "▲";
 			padding-left:7px;
@@ -96,7 +95,7 @@
 		right: 50%;
 		margin-top: 15px;
 		&:after{
-			top: -15px;
+			top: -16px;
 			right: 0px;
 			content: "▲";
 			padding-left:7px;

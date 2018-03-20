@@ -1,7 +1,9 @@
 <div class="users-item-container">
 	<div class="users-item-block service">
 		<div class="service__wraper-image">
+			<span class="service__image-likes">{{ userData.likes<500?userData.likes:"500+" }}</span>
 			<img [src]="userData.avatarLink" alt="" class="service__image">
+			<span class="service__wraper-image--pro" *ngIf="userData.pro">PRO</span>
 		</div>
 		<div class="service-description">
 			<span class="service__name">{{userData.name}}</span>
