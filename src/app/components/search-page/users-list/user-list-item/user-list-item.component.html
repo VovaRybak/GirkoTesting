@@ -1,12 +1,15 @@
 <div class="users-item-container">
 	<div class="users-item-block service">
-		<div class="service__wraper-image">
-			<span class="service__image-likes">{{ userData.likes<500?userData.likes:"500+" }}</span>
+		<span class="service__image-likes toolTip-holder">
+				<app-tooltip class="toolTip-item" [toolTipPosision]='"top-right"' [messageTitle]='"Кількість \"лайків\""' [messageText]='"Кількість вподобань іншими користувачами"'></app-tooltip>
+				{{ userData.likes<500?userData.likes:"500+" }}	
+		</span>
+		<div class="service__wraper-image">			
 			<img [src]="userData.avatarLink" alt="" class="service__image">
 			<span class="service__wraper-image--pro" *ngIf="userData.pro">PRO</span>
 		</div>
 		<div class="service-description">
-			<span class="service__name">{{userData.name}}</span>
+			<a class="service__name" routerLink="../person/{{userData.id}}">{{userData.name}}</a>
 			<div class="service-info">
 				<div class="service__contact">
 					<span class="service__number">{{userData.phone}}</span>

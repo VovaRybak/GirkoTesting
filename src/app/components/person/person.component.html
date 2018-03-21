@@ -1,0 +1,42 @@
+<div class="person-container">
+	<div class="person-container__background"></div>
+	<div class="person-main">
+		<div class="person-connections">
+			<div class="person-connections-wraper">
+				<div class="person-image-wraper">
+					<img [src]="userData.avatarLink" alt="" class="person-image">
+				</div>
+				<div class="person-social"></div>
+				<button class="person-message">Написати</button>
+			</div>
+		</div>
+		<div class="person-contact">
+			<div>
+				<span class="person-contact__title">{{userData.name}}<span class="person-pro" *ngIf="userData.pro">PRO</span> </span>		
+			</div>
+			<div class="person-contact__block">
+				<div class="person-contact__block-upper">
+						<div class="info-categories">
+							<p class="info-categories__location">{{userData.cities}}</p>
+						<p class="info-categories__category">{{userData.category}}</p>
+						</div>
+						<div class="info-phone"><span class="info__title">телефон:</span>{{userData.phone}}</div>
+						<div class="info-price"><span class="info__title">ціна від:</span>{{userData.price}} грн</div>
+					<div class="person-contact__likes-wraper">
+						<span class="person-contact__likes">{{ userData.likes<500?userData.likes:"500+" }}</span>
+						<button class="person-contact__fb-likes"><span class="person-contact__fb-likes--hand"></span> Like {{userData.likes}}</button>
+					</div>
+				</div>
+				<div class="person-contact__description">{{userData.description}}</div>
+			</div>
+		</div>
+	</div>
+	<nav class="person-navigation">
+		<div class="person-navbar">
+			<a class="person-navbar__item" (click)="showPhotos()" [ngClass]="{'person-navbar__item--selected':showPhoto }">Фото</a>
+			<a class="person-navbar__item" (click)="showVideos()" [ngClass]="{'person-navbar__item--selected':showVideo }">Відео</a>
+		</div>
+	</nav>
+</div>
+<app-media-list [imageSrc]="imgP" *ngIf="showPhoto"></app-media-list>
+<app-media-list [imageSrc]="imgV" *ngIf="showVideo"></app-media-list>

@@ -25,7 +25,7 @@ export class UsersListComponent implements OnInit {
     getUsers(params){
     this.usersService.getUsers()
       .subscribe(users=>{       
-        this.usersData=users["users"]
+        this.usersData=users
         this.pageCategory = params.category;
 	      this.filterData(params.category);
         this.perPage = 8;

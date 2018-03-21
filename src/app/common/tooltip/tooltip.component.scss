@@ -7,7 +7,7 @@
 	&-container:after{
 		display: flex;
 		position:absolute;
-		color: rgba(41,120,160,0.8);
+		color: rgba(41,120,160,0.9);
 		width:15px;
 		font-size: 16px;
 		box-sizing: border-box;
@@ -15,7 +15,7 @@
 	}
 	&-box{
 		padding:5px 10px;
-		background-color: rgba(41,120,160,0.8);
+		background-color: rgba(41,120,160,0.9);
 		width:200px;
 		text-align:left;
 	}

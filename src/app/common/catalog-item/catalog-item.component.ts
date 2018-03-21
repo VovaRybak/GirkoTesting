@@ -31,7 +31,7 @@ export class CatalogItemComponent implements OnInit {
   initUsers(){
     this.usersService.getUsers()
     .subscribe((usersDataExt)=>{
-      this.usersData=usersDataExt["users"];
+      this.usersData=usersDataExt;
       this.filterData();
     });
     

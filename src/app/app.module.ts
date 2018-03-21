@@ -17,6 +17,8 @@ import { UsersListComponent } from './components/search-page/users-list/users-li
 import { UserListItemComponent } from './components/search-page/users-list/user-list-item/user-list-item.component';
 import { PaginationComponent } from './common/pagination/pagination.component';
 import { TooltipComponent } from './common/tooltip/tooltip.component';
+import { PersonComponent } from './components/person/person.component';
+import { MediaListComponent } from './components/person/media-list/media-list.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { TooltipComponent } from './common/tooltip/tooltip.component';
     UsersListComponent,
     UserListItemComponent,
     PaginationComponent,
-    TooltipComponent
+    TooltipComponent,
+    PersonComponent,
+    MediaListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,37 @@
+@import "../../../global";
+
+.media-list{
+	&-container{
+		background-color: $mainGrey;
+	}
+	&-wraper{
+		display: flex;
+		flex-directiom:row;
+		flex-wrap:wrap;
+		width:75%;
+		margin:0 auto;		
+	}
+	&-item-wraper{
+		width: calc(100%/4);
+	}
+	&-item{
+		heigth:270px;
+		margin-top:20px;
+		width:270px;
+	}
+}
+/* .slider{
+	position:absolute;
+	width:calc(100%);
+	height:calc(100vr);
+	background-color: rgba(0,0,0,.5);
+	&-visible{
+		visibility:visible;
+	}
+	&-invisible{
+		visibility:hidden;
+	}
+	&__img{
+		margin:auto;
+	}
+} */
