@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class CatalogComponent implements OnInit {
 
 	catalogItems = [
-		{ logo:"assets/foto-icon.png",category:"Фотографи", image:"assets/foto.jpg"},
-		{ logo:"assets/video-icon.png",category:"Відеооператори", image:"assets/video.jpg"},
-		{ logo:"assets/music-icon.png",category:"Музиканти", image:"assets/music.jpg"},
-		{ logo:"assets/tamada-icon.png",category:"Ведучі", image:"assets/tamada.jpg"}
+		{ short:"photo",category:"Фотографи", image:"assets/foto.jpg"},
+		{ short:"video",category:"Відеооператори", image:"assets/video.jpg"},
+		{ short:"music",category:"Музиканти", image:"assets/music.jpg"},
+		{ short:"tamada",category:"Ведучі", image:"assets/tamada.jpg"}
 	]
     constructor() { }
 

@@ -4,7 +4,7 @@ import { Component, OnInit, Input, OnChanges, ViewEncapsulation } from '@angular
   selector: 'app-tooltip',
   templateUrl: './tooltip.component.html',
   styleUrls: ['./tooltip.component.scss'],
-  encapsulation: ViewEncapsulation.Emulated
+  encapsulation: ViewEncapsulation.None
 })
 export class TooltipComponent implements OnInit, OnChanges {
 @Input() messageTitle;

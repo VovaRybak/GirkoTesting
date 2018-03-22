@@ -1,3 +1,8 @@
 <div class="pagination-wraper">
-	<a href="" class="pagination__page" *ngFor="let number of numbers; let i = index" routerLinkActive="pagination__page--active" [ngClass]="{'pagination__page--active': currentPage==(i+1)}"routerLink="/search" [queryParams]="{category: category,page: number}"> {{number}} </a>
+	<a href="" class="pagination__page" *ngFor="let number of numbers; let i = index" 
+		routerLinkActive="pagination__page--active" 
+		[ngClass]="{'pagination__page--active': currentPage==(i+1)}"
+		routerLink="{{linkTo}}" 
+		[queryParams]="{category: category,page: number}"
+	> {{number}} </a>
 </div>

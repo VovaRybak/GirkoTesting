@@ -6,6 +6,7 @@ import { UsersService } from '../../services/users.service';
   styleUrls: ['./pagination.component.scss']
 })
 export class PaginationComponent implements OnInit, OnChanges{
+@Input() linkTo;
 @Input() perPage;
 @Input() itemsAmount;
 pagesAmount;

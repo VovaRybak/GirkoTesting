@@ -1,0 +1,91 @@
+@import "../../fonts";
+@import "../../global";
+$mainText: #333333;
+
+.footer{
+	&-container{
+		box-sizing:border-box;
+		padding:20px 0;
+		background-color: #e3dbe0;
+		border-top:1px solid #d5cdd3;
+	}
+	&-wraper{
+		width:70%;
+		margin:0 auto;
+		display: flex;
+		justify-content:space-between;
+	}
+	&-main{
+		display: flex;
+	}
+	&-soc-icons{
+		margin:{
+			left:0px;
+			right:30px;
+		}
+
+		*{
+			color:#333333;
+			cursor:pointer;
+			&:before{
+				  font-family: "iconic";
+				  margin-right:45px;
+				  font-size: 21px;
+				  			  
+			}
+			&:hover{
+			  	color:$mainPink;
+			}		
+			
+		}
+		&__facebook:before{
+			content:"\e807";
+		}
+		&__instagram:before{
+			content: '\e808';
+		}
+		&__pinterest:before{
+			content:"\e806";
+		}
+	}
+	&-menu{
+		&__item{
+			margin-right:30px;
+			font-size: 14px;
+			text-decoration: none;
+			color:$mainText;
+			font-family: Roboto;
+		}
+	}
+	&-lang{
+		align-self:flex-end;
+		display: flex;
+		font-family: Roboto;
+		&__item{
+			color:$mainText;
+			font-size: 12px;
+			text-decoration: none;
+			margin:0 20px;
+			display: flex;
+			align-items:center;
+			justify-content:center;
+			&:before{
+				content:" ";
+				background-size: 18px;
+				background-repeat: no-repeat;
+				background-position: center;
+				display: inline-block;
+				width:18px;
+				height:18px;
+				margin-right:5px;
+			}
+			&--ukr:before{
+				background-image: url("assets/ukr-flag-icon.gif");
+			}
+			&--rus:before{
+				background-image: url("assets/rus-flag-icon.gif");
+			}
+
+		}
+	}
+}

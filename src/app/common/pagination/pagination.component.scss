@@ -20,10 +20,17 @@
 		border-radius:3px;
 		background-color: transparent;
 		margin:0 3px;
+		&:hover{
+			background-color: rgba(211, 206, 206, 0.28);
+		}
 	}
 	&__page--active{
 		border:none;
 		background-color: $mainGreen;
 		color:white;
+		&:hover{
+			cursor:default;
+			background-color: $mainGreen;
+		}
 	}
 }

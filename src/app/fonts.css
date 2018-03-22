@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'iconic';
+  src: url('/assets/font/iconic.eot?91704522');
+  src: url('/assets/font/iconic.eot?91704522#iefix') format('embedded-opentype'),
+       url('/assets/font/iconic.woff2?91704522') format('woff2'),
+       url('/assets/font/iconic.woff?91704522') format('woff'),
+       url('/assets/ont/iconic.ttf?91704522') format('truetype'),
+       url('/assets/font/iconic.svg?91704522#iconic') format('svg');
+    font-weight: normal;
+  font-style: normal;
+}

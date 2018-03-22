@@ -1,6 +1,6 @@
 <div class="catalog-item-container">
 	<div class="catalog-item-header header">
-		<span class="header__icon"> <img [src]="catalogItem.logo" alt="" class="header__icon-image"></span>
+		<span class="header__icon" [ngClass]="'header__icon--'+catalogItem.short"> </span>
 		<span class="header__title">{{ catalogItem.category }}</span>
 	</div>
 	<div class="catalog-item__image-wraper">

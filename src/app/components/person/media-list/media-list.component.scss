@@ -12,12 +12,47 @@
 		margin:0 auto;		
 	}
 	&-item-wraper{
-		width: calc(100%/4);
+		position: relative;
+		overflow:hidden;
+		display: flex;
+		justify-content:center;
+		align-items:center;
+		cursor:pointer;
+		&--photo{
+			width: 270px;
+			height:270px;
+			margin:{
+				right:25px;
+				top:25px;
+			}
+		}
+		&--video{
+			width: 360px;
+			height:200px;
+			margin:{
+				right:30px;
+				top:30px;
+			}
+		}
+		&:hover .media-list-item__play{
+				opacity:1;
+				cursor:pointer;
+		}
 	}
 	&-item{
-		heigth:270px;
-		margin-top:20px;
-		width:270px;
+		position:absolute;
+		top:-50%;
+		left:-50%;
+		height:100%;
+		width:100%;
+		transform: translate(50%,50%);
+		object-fit: cover;	
+		&__play{
+			z-index:2;
+			opacity:0.7;
+
+			
+		}
 	}
 }
 /* .slider{

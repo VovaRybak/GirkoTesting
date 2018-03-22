@@ -19,6 +19,8 @@ import { PaginationComponent } from './common/pagination/pagination.component';
 import { TooltipComponent } from './common/tooltip/tooltip.component';
 import { PersonComponent } from './components/person/person.component';
 import { MediaListComponent } from './components/person/media-list/media-list.component';
+import { FooterComponent } from './common/footer/footer.component';
+import { MediaService } from './services/media.service';
 
 
 @NgModule({
@@ -35,14 +37,15 @@ import { MediaListComponent } from './components/person/media-list/media-list.co
     PaginationComponent,
     TooltipComponent,
     PersonComponent,
-    MediaListComponent
+    MediaListComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [ UsersService, HttpClient ],
+  providers: [ UsersService, HttpClient, MediaService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

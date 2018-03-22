@@ -26,12 +26,44 @@ export class UsersListComponent implements OnInit {
     this.usersService.getUsers()
       .subscribe(users=>{       
         this.usersData=users
+        this.sortData();
         this.pageCategory = params.category;
 	      this.filterData(params.category);
         this.perPage = 8;
         this.chooseForPage(params.page,this.perPage);  
         this.usersCategory = this.usersData[0].category; 
       });
+  }
+  sortData(){
+    let proAmount=0;
+    this.usersData.sort((a,b)=>{
+       if(a['pro'])
+       {
+         if(b['pro'])
+         {
+             return b['likes']-a['likes'];
+         }
+         else
+           return -1;
+       }
+       else{
+         if(b['pro'])
+         {
+            return 1;
+         }
+       }
+
+    });
+    this.usersData.forEach((value)=>{if(value['pro']) proAmount++;})
+    let tempArray,tempSorted;
+    console.log(proAmount);
+    tempArray = this.usersData.slice(proAmount,this.usersData.length);
+    tempSorted = this.usersData.slice(0,proAmount);
+    tempArray.sort((a,b)=>b['likes']-a['likes']);
+    console.log(tempSorted);
+    console.log(tempArray);
+    this.usersData = tempSorted.concat(tempArray);
+    //this.usersData += tempArray.slice(0);
   }
   chooseForPage(page=1,onPage){
     this.currentPage = page;

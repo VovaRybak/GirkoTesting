@@ -38,5 +38,5 @@
 		</div>
 	</nav>
 </div>
-<app-media-list [imageSrc]="imgP" *ngIf="showPhoto"></app-media-list>
-<app-media-list [imageSrc]="imgV" *ngIf="showVideo"></app-media-list>
+<app-media-list [toShow]="'photo'" *ngIf="showPhoto" [userId]=userData.id></app-media-list>
+<app-media-list [toShow]="'video'" *ngIf="showVideo" [userId]=userData.id></app-media-list>

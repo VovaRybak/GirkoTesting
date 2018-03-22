@@ -1,12 +1,10 @@
 <div class="media-list-container">
 	<div class="media-list-wraper">
-		<div class="media-list-item-wraper" *ngFor='let number of numbers'>
-			<img [src]="imageSrc" alt="" class="media-list-item" >
+		<div class="media-list-item-wraper" [ngClass]="'media-list-item-wraper--'+toShow" *ngFor='let image of currArray'>
+			<img src="assets/play-icon.png" class="media-list-item__play" *ngIf='toShow=="video"'>
+			<img [src]="image.mediaSrc" alt="" class="media-list-item" >
 		</div>
 	</div>
+	
+<app-pagination [currentPage]='currentPage' [itemsAmount] = 'amountItems' [perPage]='perPage' [linkTo]="linkToLoc"></app-pagination>
 </div>
-<!-- <div class="slider" [ngClass]="{'slider-visible':sliderVisible}" [ngClass]="{'slider-invisible':!sliderVisible}">
-	<span class="slider__prev"><</span>
-	<img [src]="sliderCurImg" alt="" class="slider__img">
-	<span class="slider__next">></span>
-</div> -->

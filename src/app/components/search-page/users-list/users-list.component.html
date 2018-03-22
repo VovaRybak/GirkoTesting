@@ -6,6 +6,6 @@
 		<div class="user-list-wraper">
 			<app-user-list-item class="user-list__item" *ngFor='let user of usersData' [userData]="user"></app-user-list-item>
 		</div>
-		<app-pagination [category]='pageCategory' [currentPage]='currentPage' [itemsAmount] = 'amountItems' [perPage]='perPage'></app-pagination>
+		<app-pagination [linkTo]="'/search'" [category]='pageCategory' [currentPage]='currentPage' [itemsAmount] = 'amountItems' [perPage]='perPage'></app-pagination>
 	</div>
 </div>
