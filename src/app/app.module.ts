@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-
+import { FormsModule } from "@angular/forms";
 import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { UsersService } from "./services/users.service";
 
@@ -12,7 +12,8 @@ import { CatalogComponent } from './components/catalog/catalog.component';
 import { CatalogItemComponent } from './common/catalog-item/catalog-item.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { SearchPageComponent } from './components/search-page/search-page.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
+import { AuthModule } from './auth/auth.module';
 import { UsersListComponent } from './components/search-page/users-list/users-list.component';
 import { UserListItemComponent } from './components/search-page/users-list/user-list-item/user-list-item.component';
 import { PaginationComponent } from './common/pagination/pagination.component';
@@ -43,7 +44,9 @@ import { MediaService } from './services/media.service';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    AuthModule
   ],
   providers: [ UsersService, HttpClient, MediaService ],
   bootstrap: [AppComponent]

@@ -1,0 +1,26 @@
+<div class="signin-container">
+	<div class="signin-wraper">
+		<div class="signin__manual">
+			<h2 class="signin__title">Вхід на сайт</h2>
+			<form action="" class="signin-form" name="signInForm">
+				<input  type="text" class="signin-form__input" name="email" placeholder="Email" [(ngModel)]="userEmail" #email='ngModel'>
+				<input [(ngModel)]="userPassword" #password='ngModel' type="password" minlength="6" maxlength="24" class="signin-form__input" name="password" placeholder="Пароль">
+				<span class="error" *ngIf='password.invalid && (password.dirty || password.touched)'>Пароль повинен містити не менше 6 та не більше 24 символів</span>
+			</form>
+		</div>
+		<span class="signin__or">АБО</span>
+		<div class="signin__via-social">
+			<span class="signin__via-social--title">Увійти за допомогою акаунту в соціальних мережах</span>
+			<button class="social social__vk">Вконтакте</button>
+			<button class="social social__facebook">Facebook</button>
+			<button class="social social__google">Gmail</button>
+		</div>
+	</div>
+	<div class="signin-footer">
+		<button class="signin-footer__button" type="submit" form="signInForm" value="Submit">Увійти</button>
+		<div class="signin-navigation">
+			<a href="" class="signin-navigation__item" routerLink="../reset">Забули пароль ?</a>
+			<a href="" class="signin-navigation__item" routerLink="../signup">Реєстрація нового кориcтувача</a>
+		</div>
+	</div>
+</div>

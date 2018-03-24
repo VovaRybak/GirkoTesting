@@ -29,11 +29,11 @@
 			</ul>
 		</nav>
 		<div class="header-auth">
-			<a href="" class="header-auth__enter toolTip-holder">
+			<a href="" class="header-auth__enter toolTip-holder" routerLink="auth/signin">
 				Вхід
 				<app-tooltip class="toolTip-item" [toolTipPosision]='"bottom-left"' [messageTitle]='"Авторизація"' [messageText]='"Здійснення входу в власний обліковий запис"'></app-tooltip>
 			</a>
-			<button class="header-auth__register toolTip-holder">
+			<button class="header-auth__register toolTip-holder" routerLink="auth/signup">
 				Реєстрація
 				<app-tooltip class="toolTip-item" [toolTipPosision]='"bottom-left"' [messageTitle]='"Реєстрація"' [messageText]='"Створення власного облікового запису"'></app-tooltip>
 			</button>

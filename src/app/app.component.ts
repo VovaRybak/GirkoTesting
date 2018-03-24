@@ -7,8 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-	sendSearch(message){
-		console.log("recived message "+ message);
-	}
-
 }

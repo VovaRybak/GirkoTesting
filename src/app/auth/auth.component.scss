@@ -1,0 +1,20 @@
+@import "../global";
+
+.auth{
+	&-container{
+		box-sizing:border-box;
+		height: calc(100vh - 113px);
+		background-color: $mainGrey;
+		width:100%;
+		padding:50px 0;
+	}
+	&-wraper{
+		display: block;
+		width:740px; 
+		
+		height:320px;
+		margin:0 auto;
+		background-color: #fff;
+		border:10px solid rgba(61, 57, 57, 0.2);
+	}
+}

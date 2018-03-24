@@ -1,0 +1,118 @@
+@import "../../fonts";
+@import "../../global";
+
+.error{
+	color:red;
+	font-size: 12px;
+}
+.signin{
+	&-container{
+		font-family: Roboto;
+		position: relative;
+	}
+	&-wraper{
+		padding:20px 40px;
+		display: flex;
+		justify-content:space-between;
+		box-sizing:border-box;
+		height: 245px;
+	}
+	&__title{
+		margin:0;
+		font-weight: 300;
+		font-size: 32px;
+	}
+	&__or{
+		height:100%;
+		display: flex;
+		align-items:center;
+		justify-content:center;
+	}
+	&-form{
+		display: flex;
+		flex-direction:column;
+		&__input{
+			margin-top:15px;
+			border-radius:3px;
+			border:1px solid #ddd;
+			padding: 5px 10px;
+			outline:none;
+			font-size: 14px;
+			font-weight: lighter;
+		}
+	}
+	&-footer{
+		*{
+			box-sizing:border-box;
+		}
+		background-color: #eee;
+		border-top:1px solid #ddd;
+		display: flex;
+		box-sizing:border-box;
+		padding:20px 40px;
+		&__button{
+			background-color: $mainGreen;
+			color:white;
+			border-radius:5px;
+			border:none;
+			font-size: 14px;
+			padding:5px 30px;
+			margin-right:30px;
+		}
+	}
+	&-navigation{
+
+		display: flex;
+		flex-direction:column;
+		&__item{
+			font-size: 14px;
+			text-decoration: none;
+			color:$mainPink;
+		}
+	}
+	&__manual{
+		width:40%;
+	}
+	&__via-social{
+		width:40%;
+		display: flex;
+		flex-direction:column;
+		&--title{
+			font-size: 14px;
+
+		}
+	}
+}
+.social{
+	color:white;
+	font-size: 14px;
+	margin-top:15px;
+	border-radius:3px;
+	border:1px solid rgba(0,0,0,.1);
+	padding:8px 20px;
+	text-align:left;
+	&:before{
+		display: inline-block;
+		color:white;
+		font-family: iconic;
+		width:45px;
+	}
+	&__vk{
+		background: linear-gradient(to bottom, rgba(67,126,163,1) 0%, rgba(57,105,145,1) 100%);
+		&:before{
+			content:"\e815";
+		}
+	}
+	&__facebook{
+		background: linear-gradient(to bottom, rgba(65,90,213,1) 0%, rgba(43,67,116,1) 100%);
+		&:before{
+			content:"\e807";
+		}
+	}
+	&__google{
+		background: linear-gradient(to bottom, rgba(206,97,85,1) 0%, rgba(209,51,34,1) 100%);
+		&:before{
+			content:"\e814";
+		}
+	}
+}
