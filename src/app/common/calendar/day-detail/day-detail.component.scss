@@ -1,0 +1,37 @@
+.detail-block{
+  background-color: #fff;
+  &__title{
+    padding: 20px;
+    background-color: #5cb85c;
+    color:white;
+    display: flex;
+    justify-content: center;
+    *{
+      margin-right: 5px;
+    }
+  }
+  &__description{
+    background-color: #fff;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &--title{
+      align-self: flex-start;
+      font-size: 12px;
+      color:#9d9b99;
+      margin-bottom:10px;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+  }
+  &__button{
+    margin-top: 20px;
+    border:none;
+    background-color: #DD2584;
+    color:white;
+    padding:5px 15px;
+    border-radius:3px;
+  }
+}

@@ -58,6 +58,10 @@
 			font-size: 14px;
 			padding:5px 30px;
 			margin-right:30px;
+			&:disabled{
+				filter:grayscale(80%);
+				text-decoration: underline;
+			}
 		}
 	}
 	&-navigation{
@@ -79,7 +83,6 @@
 		flex-direction:column;
 		&--title{
 			font-size: 14px;
-
 		}
 	}
 }

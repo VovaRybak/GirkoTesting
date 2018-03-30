@@ -2,10 +2,13 @@
 	<div class="signin-wraper">
 		<div class="signin__manual">
 			<h2 class="signin__title">Вхід на сайт</h2>
-			<form action="" class="signin-form" name="signInForm">
-				<input  type="text" class="signin-form__input" name="email" placeholder="Email" [(ngModel)]="userEmail" #email='ngModel'>
+			<form (ngSubmit)="checkAuth()" class="signin-form" id="signInForm" #signInForm>
+				<input  type="text" class="signin-form__input" pattern="^[-a-z0-9!#$%&'*+/=?^_`{|}~]+(\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*@([a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.)*(aero|arpa|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|[a-z][a-z])$" name="email" placeholder="Email" [(ngModel)]="userEmail" #email='ngModel'>
 				<input [(ngModel)]="userPassword" #password='ngModel' type="password" minlength="6" maxlength="24" class="signin-form__input" name="password" placeholder="Пароль">
 				<span class="error" *ngIf='password.invalid && (password.dirty || password.touched)'>Пароль повинен містити не менше 6 та не більше 24 символів</span>
+				<span class="error" *ngIf='email.invalid && (email.dirty || email.touched)'>Не валідна електронна адреса</span>
+				<span class="error" *ngIf='usersData.length==0'>Невірний пароль або email</span>
+
 			</form>
 		</div>
 		<span class="signin__or">АБО</span>
@@ -17,7 +20,7 @@
 		</div>
 	</div>
 	<div class="signin-footer">
-		<button class="signin-footer__button" type="submit" form="signInForm" value="Submit">Увійти</button>
+		<input [disabled]="password.invalid||email.invalid" class="signin-footer__button" type="submit" form="signInForm" value="Увійти">
 		<div class="signin-navigation">
 			<a href="" class="signin-navigation__item" routerLink="../reset">Забули пароль ?</a>
 			<a href="" class="signin-navigation__item" routerLink="../signup">Реєстрація нового кориcтувача</a>

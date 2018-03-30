@@ -1,0 +1,129 @@
+*{
+  font-family: Roboto,sans-serif;
+}
+.calendar-detail{
+  width:20%;
+  margin-top:75px;
+}
+.user__title{
+  font-weight: lighter;
+  font-size: 24px;
+}
+.navigation{
+  display: flex;
+  justify-content: center;
+  width:100%;
+  background-color: #5cb85c;
+  color:white;
+  padding-top:10px;
+  &:last-of-type{
+    padding-bottom:10px;
+  }
+  .title{
+    width:100px;
+    text-align: center;
+  }
+}
+.calendar-container{
+  min-height: calc(100vh - 112px);
+  display: flex;
+  justify-content:flex-start ;
+  align-items: flex-start;
+  width:100%;
+  background-color: #f1e8ee;
+}
+.nav_btn{
+  background-color: rgba(255,255,255,.1);
+  width:20px;
+  height:20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  padding:0;
+  outline:none;
+  border:1px solid rgba(220,220,220,.4);
+  border-radius: 50%;
+  margin:0 20px;
+  cursor: pointer;
+  &:hover{
+    border:1px solid rgba(220,220,220,.5);
+    background-color: rgba(255,255,255,.3);
+  }
+}
+.calendar{
+  width:1000px;
+  margin: 0 50px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  &__days-titles{
+    padding:0 10px;
+    width:calc(100%/7);
+  }
+  &__main{
+    border:1px solid rgba(220,220,220,.3);
+    background-color: #ffffff;
+    border-top:none;
+    display: flex;
+    flex-direction: column;
+  }
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    &--title{
+      background-color: #96CC94;
+      color:white;
+    }
+  }
+  &__day{
+    width:calc(100%/7);
+    height:50px;
+    padding:5px;
+    border:1px solid rgba(220,220,220,.3);
+    color:#C6C6C4;
+    background-color: #F9F9F9;
+    margin:5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 6px -2px rgba(220, 220, 220, 1);
+    &--current-month{
+      color:#333333;
+      background-color: #ffffff;
+      &:hover{
+        background-color: rgba(220,220,220,.5);
+        font-weight: bold;
+      }
+    }
+    &--reserved{
+      position: relative;
+      overflow: hidden;
+      &:after{
+        position: absolute;
+        top: -25px;
+        right: -25px;
+        content: "▲";
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        color: #FF5D56;
+        font-size: 40px;
+
+      }
+    }
+    &--today{
+      //outline: 2px solid //#ff9ccf;
+      outline-offset: -2px;
+      position: relative;
+
+      background-color: rgba(37, 221, 137, 0.26);//rgba(58, 204, 243, 0.175);//
+      //color: #08b5e3;
+      color:white;
+      font-weight: bold;
+      &:hover{
+        background-color: rgba(220,220,220,.5);
+        color:#333333;
+        font-weight: bold;
+      }
+
+    }
+  }
+}

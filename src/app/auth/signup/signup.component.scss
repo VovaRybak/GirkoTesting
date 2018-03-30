@@ -1,6 +1,9 @@
 @import "../../fonts";
 @import "../../global";
-
+.error{
+  color:red;
+  font-size: 12px;
+}
 .signup{
 	&-container{
 		font-family: Roboto;

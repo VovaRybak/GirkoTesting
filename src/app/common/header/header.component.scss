@@ -45,6 +45,23 @@
 			list-style:none;
 		}
 	}
+  &-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    float: right;
+    &__user-name{
+      color:white;
+      text-transform: none;
+    }
+    &__user-image{
+      width:30px;
+      height:30px;
+      border-radius: 50%;
+      margin-right:20px;
+    }
+  }
 	&-auth{
 		display: flex;
 		justify-content:center;

@@ -28,15 +28,22 @@
 				</li>
 			</ul>
 		</nav>
-		<div class="header-auth">
-			<a href="" class="header-auth__enter toolTip-holder" routerLink="auth/signin">
-				Вхід
-				<app-tooltip class="toolTip-item" [toolTipPosision]='"bottom-left"' [messageTitle]='"Авторизація"' [messageText]='"Здійснення входу в власний обліковий запис"'></app-tooltip>
-			</a>
-			<button class="header-auth__register toolTip-holder" routerLink="auth/signup">
-				Реєстрація
-				<app-tooltip class="toolTip-item" [toolTipPosision]='"bottom-left"' [messageTitle]='"Реєстрація"' [messageText]='"Створення власного облікового запису"'></app-tooltip>
-			</button>
-		</div>
+		<div class="header-auth" *ngIf="!userId">
+    <a href="" class="header-auth__enter toolTip-holder" routerLink="auth/signin">
+      Вхід
+      <app-tooltip class="toolTip-item" [toolTipPosision]='"bottom-left"' [messageTitle]='"Авторизація"' [messageText]='"Здійснення входу в власний обліковий запис"'></app-tooltip>
+    </a>
+    <button class="header-auth__register toolTip-holder" routerLink="auth/signup">
+      Реєстрація
+      <app-tooltip class="toolTip-item" [toolTipPosision]='"bottom-left"' [messageTitle]='"Реєстрація"' [messageText]='"Створення власного облікового запису"'></app-tooltip>
+    </button>
+  </div>
+    <div class="header-profile" *ngIf = "userId">
+      <img [src]="usersData?.avatarLink" alt="" class="header-profile__user-image">
+      <span class="header-profile__user-name">{{usersData?.name}}</span>
+      <button class="header-auth__register toolTip-holder" (click)="logOut()">
+        Вихід
+      </button>
+    </div>
 	</div>
 </header>

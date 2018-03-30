@@ -6,6 +6,7 @@ import { ResetComponent } from './reset/reset.component';
 import { AuthComponent } from './auth.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule } from "@angular/forms";
+import { AuthService } from './auth.service';
 
 @NgModule({
   imports: [
@@ -13,6 +14,7 @@ import { FormsModule } from "@angular/forms";
     AppRoutingModule,
     FormsModule
   ],
+  providers: [AuthService],
   declarations: [AuthComponent,SignupComponent, SigninComponent, ResetComponent],
 })
 export class AuthModule { }

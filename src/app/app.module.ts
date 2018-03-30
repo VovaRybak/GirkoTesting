@@ -4,7 +4,8 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { FormsModule } from "@angular/forms";
 import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { UsersService } from "./services/users.service";
-
+import { SetLoginService } from "./services/set-login.service";
+import { AuthGuard } from "./auth/auth.guard"
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
 import { FilterComponent } from './common/filter/filter.component';
@@ -22,7 +23,9 @@ import { PersonComponent } from './components/person/person.component';
 import { MediaListComponent } from './components/person/media-list/media-list.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { MediaService } from './services/media.service';
-
+import { CalendarComponent } from './common/calendar/calendar.component';
+import { DayDetailComponent } from './common/calendar/day-detail/day-detail.component';
+import { EventsService} from './services/events.service';
 
 @NgModule({
   declarations: [
@@ -39,16 +42,18 @@ import { MediaService } from './services/media.service';
     TooltipComponent,
     PersonComponent,
     MediaListComponent,
-    FooterComponent
+    FooterComponent,
+    CalendarComponent,
+    DayDetailComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    AuthModule
+    AuthModule,
   ],
-  providers: [ UsersService, HttpClient, MediaService ],
+  providers: [ UsersService, HttpClient, MediaService, AuthGuard,SetLoginService, EventsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

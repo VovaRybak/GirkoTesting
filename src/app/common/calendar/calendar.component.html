@@ -1,0 +1,30 @@
+<div class="calendar-container">
+  <table class="calendar">
+    <h3 class="user__title">Календар користувача {{userData?.name}}</h3>
+    <div class="navigation">
+      <button (click)="prevYear()" class="nav_btn"><</button>
+      <div class="year">{{currentDate.getFullYear()}}</div>
+      <button (click)="nextYear()" class="nav_btn">></button>
+    </div>
+    <div class="navigation">
+      <button (click)="prevMonth()" class="nav_btn"><</button>
+      <span class="title">{{monthNames[currentDate.getMonth()]}}</span>
+      <button (click)="nextMonth()" class="nav_btn">></button>
+    </div>
+    <tr class="calendar__row calendar__row--title">
+      <td *ngFor="let weekDay of weekDays" class="calendar__days-titles">{{weekDay}}</td>
+    </tr>
+    <div class="calendar__main">
+      <tr class="calendar__row" *ngFor="let week of monthWeeksObject">
+        <td class="calendar__day" *ngFor="let day of week"
+            (click) = "chooseDate(day.date)"
+            [ngClass]="{
+            'calendar__day--current-month':day.thisMonth ,
+            'calendar__day--today':day.isToday,
+            'calendar__day--reserved':isReserved(day.date)
+            }" >{{day.date.getDate()}}</td>
+      </tr>
+    </div>
+  </table>
+  <app-day-detail class="calendar-detail" [daySelected]='selectedData' [eventSelected]='selectedDataEvent' (onAdded)="addNewEvent($event)"></app-day-detail>
+</div>

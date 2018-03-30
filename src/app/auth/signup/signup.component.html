@@ -3,9 +3,12 @@
 		<div class="signup__manual">
 			<h2 class="signup__title">Реєстрація</h2>
 			<form action="" class="signup-form">
-				<input type="text" class="signup-form__input" name="login" placeholder="Email">
-				<input type="password" class="signup-form__input" name="password" placeholder="Пароль">
-				<input type="password" class="signup-form__input" name="password" placeholder="Пароль зе раз">
+				<input  type="text" class="signup-form__input" name="login" placeholder="Email" name="reg-email" placeholder="Email" [(ngModel)]="userEmail" #regEmail='ngModel' pattern="^[-a-z0-9!#$%&'*+/=?^_`{|}~]+(\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*@([a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.)*(aero|arpa|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|[a-z][a-z])$">
+				<input [(ngModel)]="userPassword" #regPassword='ngModel' type="password" minlength="6" maxlength="24" class="signup-form__input" name="reg-password" placeholder="Пароль">
+				<input [(ngModel)]="userRePassword" #regPassword='ngModel' type="password" class="signup-form__input" name="reg-re-password" placeholder="Пароль зе раз">
+        <span class="error" *ngIf='regPassword.invalid && (regPassword.dirty || regPassword.touched)'>Пароль повинен містити не менше 6 та не більше 24 символів</span>
+        <span class="error" *ngIf='regEmail.invalid && (regEmail.dirty || regEmail.touched)'>Не валідна електронна адреса</span>
+        <span class="error" *ngIf='rePassValid'>Паролі не співпадають</span>
 			</form>
 		</div>
 		<span class="signup__or">АБО</span>

@@ -11,10 +11,9 @@ export class PersonComponent implements OnInit {
 userData;
 showPhoto=true;
 showVideo=false;
-imgV = "https://girko.net/uploadedMedia/service/vsvsb76/5424/service_list/facf9128962b3c9f536b3cfe4f22fd01ecc627a7bb3d4f665c7ab223c66afe3b.jpg";
-imgP = "https://girko.net/uploadedMedia/service/vsvsb76/5424/service_list/dad19800f259bb5adf402f24b5afa01b6a3ae89356eb7e27f1abaf78132f5cd2.jpg";
-  constructor( 
-  				private usersService:UsersService, 
+userId = this.route.snapshot.paramMap.get('id');
+  constructor(
+  				private usersService:UsersService,
   				private route: ActivatedRoute
   			) { }
 
@@ -22,11 +21,10 @@ imgP = "https://girko.net/uploadedMedia/service/vsvsb76/5424/service_list/dad198
   	this.getUsersById();
   }
   getUsersById(){
-    const userId = this.route.snapshot.paramMap.get('id');
     this.usersService.getUsers()
      .subscribe((user)=>{
         this.userData=user;
-        this.filterData(userId);
+        this.filterData(this.userId);
         })
   }
   filterData(id){
