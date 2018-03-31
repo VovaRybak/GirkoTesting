@@ -2,20 +2,46 @@
 	<div class="filter-wraper">
 		<div class="filter-block">
 			<div class="filter-block__category filter-select toolTip-holder">
-				<app-tooltip class="toolTip-item" [toolTipPosision]='"top-right"' [messageTitle]='"Критерій категорія"' [messageText]='"Відбір користувачів по роду діяльності"'></app-tooltip>
-				<select type="text" class="filter-select__list">
+				<app-tooltip class="toolTip-item"
+                     [toolTipPosision]='"top-right"'
+                     [messageTitle]='"Критерій категорія"'
+                     [messageText]='"Відбір користувачів по роду діяльності"'>
+
+        </app-tooltip>
+				<select type="text" class="filter-select__list" (change)="setSearchParams($event.target,undefined)">
 					<option value="" disabled selected>Оберіть категорію</option>
-					<option value="" *ngFor='let category of categorysList' class="filter-select__list-item">{{category}}</option>
+					<option value=""
+                  *ngFor='let category of categorysList'
+                  [value]="category.categoryTag"
+                  class="filter-select__list-item">{{category.categoryName}}
+          </option>
 				</select>
 			</div>
 			<div class="filter-block__city filter-select toolTip-holder">
-				<app-tooltip class="toolTip-item" [toolTipPosision]='"top-right"' [messageTitle]='"Критерій місто"' [messageText]='"Відбір користувачів по місту роботи"'></app-tooltip>
-				<select type="text" class="filter-select__list">					
+				<app-tooltip class="toolTip-item"
+                     [toolTipPosision]='"top-right"'
+                     [messageTitle]='"Критерій місто"'
+                     [messageText]='"Відбір користувачів по місту роботи"'>
+
+        </app-tooltip>
+				<select type="text" class="filter-select__list" (change)="setSearchParams(undefined,$event.target)">
 					<option value="" disabled selected>Оберіть місто</option>
-					<option value="" *ngFor='let city of citysList' class="filter-select__list-item">{{city}}</option>
+					<option value="" *ngFor='let city of citysList'
+                  [value]="city.cityTag" class="filter-select__list-item">{{city.cityName}}
+          </option>
 				</select>
 			</div>
-			<button (click)="onSearch()" class="filter-block__button toolTip-holder"><app-tooltip class="toolTip-item" [toolTipPosision]='"top-right"' [messageTitle]='"Кнопка пошук"' [messageText]='"Здійснення пошуку"'></app-tooltip>Пошук</button>
+			<button
+        routerLink='../search'
+        [queryParams]="{category : categorySearchTag,city : citySearchTag}"
+        class="filter-block__button toolTip-holder">
+        <app-tooltip class="toolTip-item"
+                     [toolTipPosision]='"top-right"'
+                     [messageTitle]='"Кнопка пошук"'
+                     [messageText]='"Здійснення пошуку"'>
+
+        </app-tooltip>Пошук
+      </button>
 		</div>
 	</div>
 </div>

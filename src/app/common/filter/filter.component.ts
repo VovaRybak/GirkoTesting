@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -6,15 +6,20 @@ import { Component, OnInit, Output, EventEmitter,Input } from '@angular/core';
   styleUrls: ['./filter.component.scss']
 })
 export class FilterComponent implements OnInit {
-@Output() sendSearch = new EventEmitter<any>();
 @Input() categorysList;
 @Input() citysList;
+citySearchTag;
+categorySearchTag;
   constructor() { }
 
   ngOnInit() {
   }
-  onSearch(){
-  	this.sendSearch.emit("from child");
+  setSearchParams(category,city ){
+    if(city!==undefined)
+      this.citySearchTag = city.value;
+    console.log(this.citySearchTag);
+    if(category!==undefined)
+      this.categorySearchTag = category.value;
+    console.log(this.categorySearchTag);
   }
-
 }

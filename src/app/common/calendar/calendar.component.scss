@@ -1,3 +1,5 @@
+@import "../../fonts";
+
 *{
   font-family: Roboto,sans-serif;
 }
@@ -86,6 +88,47 @@
     margin:5px;
     cursor: pointer;
     box-shadow: 1px 1px 6px -2px rgba(220, 220, 220, 1);
+    &--city{
+      position:absolute;
+      bottom:5px;
+      right:5px;
+      font-size: 12px;
+      color:#9d9b99;
+    }
+    &--type{
+      position:absolute;
+      top:5px;
+      right:10px;
+      &:before{
+        font-family: 'iconic';
+        color:#b85c8a;
+      }
+    }
+    &--birthday{
+      &:before{
+        content:"\E801";
+      }
+    }
+    &--wedding{
+      &:before{
+        content:"\E80C";
+      }
+    }
+    &--education{
+      &:before{
+        content:"\E80B";
+      }
+    }
+    &--buffet{
+      &:before{
+        content:"\E800";
+      }
+    }
+    &--other{
+      &:before{
+        content:"\E80A";
+      }
+    }
     &--current-month{
       color:#333333;
       background-color: #ffffff;
@@ -94,9 +137,16 @@
         font-weight: bold;
       }
     }
+    &--selected{
+      outline:3px solid rgba(150,150,150,.4);
+      outline-offset: -3px;
+    }
     &--reserved{
       position: relative;
       overflow: hidden;
+      &-disabled{
+        filter:grayscale(100%);
+      }
       &:after{
         position: absolute;
         top: -25px;
@@ -104,7 +154,7 @@
         content: "▲";
         -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
-        color: #FF5D56;
+        color: #b85c8a;
         font-size: 40px;
 
       }
@@ -114,7 +164,7 @@
       outline-offset: -2px;
       position: relative;
 
-      background-color: rgba(37, 221, 137, 0.26);//rgba(58, 204, 243, 0.175);//
+      background-color:#5cb8b8; //rgba(37, 221, 137, 0.26);//rgba(58, 204, 243, 0.175);//
       //color: #08b5e3;
       color:white;
       font-weight: bold;

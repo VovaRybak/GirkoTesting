@@ -1,14 +1,15 @@
 <div *ngIf="eventSelected" class="detail-block">
   <div class="detail-block__title">
-    <span class="detail-block__title--date">{{eventSelected.date}}</span>
-    <span class="detail-block__title--month">{{monthNames[eventSelected.month]}}</span>
+    <span class="detail-block__title--date">{{daySelected.date}}</span>
+    <span class="detail-block__title--month">{{monthNames[daySelected.month]}}</span>
     <span class="detail-block__title--year">{{daySelected.year}} року</span>
   </div>
 
    <div class="detail-block__description">
-     <span class="detail-block__description--title">Подія:</span>
+     <div class="detail-block__description--title">Подія:<span>{{getEventName(eventSelected)}}</span></div>
      {{eventSelected.description}}
    </div>
+  <div class="detail-block__description--footer">Місто:<span>{{eventSelected.city}}</span></div>
 </div>
 <div *ngIf="!eventSelected">
   <div class="detail-block__title">
@@ -16,11 +17,25 @@
     <span class="detail-block__title--month">{{monthNames[daySelected.month]}}</span>
     <span class="detail-block__title--year">{{daySelected.year}} року</span>
   </div>
-  <div class="detail-block__description">
+  <div class="detail-block__description" *ngIf = '!showForm'>
     <span class="detail-block__description--title">Подія:</span>
     На цей день нічого не заплановано
-    <button class="detail-block__button" (click)="sendEvent()">Запланувати ?</button>
+    <button class="detail-block__button" (click)="showFormFn()">Запланувати ?</button>
   </div>
-
+  <form action="" class="detail-block__description" *ngIf = 'showForm'>
+    <select name="" id="selectEventCategory" (change)="catchCategory($event.target)">
+      <option value="" disabled selected>Оберіть тип події</option>
+      <option value="" *ngFor="let category of eventCategories" [value]="category.tag">{{category.name}}</option>
+    </select>
+    <select name="" id="selectEventCity" (change)="catchCity($event.target)">
+      <option value="" disabled selected>Оберіть місто</option>
+      <option value="" *ngFor="let city of citiesArray" [value]="city">{{city}}</option>
+    </select>
+    <label for="eventDescription">Введіть опис</label>
+    <textarea name="eventDesc" id="eventDescription" cols="20" rows="5" (change)="catchDescription($event.target)"></textarea>
+    <button class="detail-block__button" (click)="sendEvent()">
+      Запланувати
+    </button>
+  </form>
 
 </div>

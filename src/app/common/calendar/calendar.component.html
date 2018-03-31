@@ -19,12 +19,18 @@
         <td class="calendar__day" *ngFor="let day of week"
             (click) = "chooseDate(day.date)"
             [ngClass]="{
+            'calendar__day--reserved-disabled':day.thisMonth==false&&isReserved(day.date),
             'calendar__day--current-month':day.thisMonth ,
             'calendar__day--today':day.isToday,
-            'calendar__day--reserved':isReserved(day.date)
-            }" >{{day.date.getDate()}}</td>
+            'calendar__day--reserved':isReserved(day.date),
+            'calendar__day--selected':isSelected(day.date)
+            }" >{{day.date.getDate()}}
+          <span class="calendar__day--type"  *ngIf="isReserved(day?.date)" [ngClass]='eventTypeClass(day?.date)'> </span>
+          <span class="calendar__day--city"  *ngIf="isReserved(day?.date)">{{getEventByDate(day?.date)['city']}}</span>
+        </td>
+
       </tr>
     </div>
   </table>
-  <app-day-detail class="calendar-detail" [daySelected]='selectedData' [eventSelected]='selectedDataEvent' (onAdded)="addNewEvent($event)"></app-day-detail>
+  <app-day-detail class="calendar-detail" [citiesArray]="userData?.cities" [daySelected]='selectedData' [eventSelected]='selectedDataEvent' (onAdded)="addNewEvent($event)"></app-day-detail>
 </div>

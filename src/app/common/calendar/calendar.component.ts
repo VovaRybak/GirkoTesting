@@ -29,23 +29,25 @@ export class CalendarComponent implements OnInit {
   constructor(private userService:UsersService,private route:ActivatedRoute,private eventsService:EventsService) {}
 
   ngOnInit() {
-    this.selectedDataEvent = this.getEventByDate(this.currentDate)
     this.selectedData = {date:this.currentDate.getDate(),month:this.currentDate.getMonth(),year:this.currentDate.getFullYear()};
     this.userId = this.route.snapshot.paramMap.get('id');
     this.getUsersById();
-    console.log(this.selectedDataEvent['description']);
     this.formMonthDays(this.currentDate);
     this.formMonthWeeks();
+
   }
-  addNewEvent(desc){
+  addNewEvent(event){
     this.eventsData.push({
       id:+this.userId,
       year:this.selectedData.year.toString(),
       month:this.selectedData.month.toString(),
       date:this.selectedData.date.toString(),
-      description:desc
+      description:event.description,
+      event_type:event.event_type,
+      city:event.city
     });
-    console.log(this.eventsData);
+    let tmp = new Date(this.selectedData.year,this.selectedData.month,this.selectedData.date)
+    this.selectedDataEvent = this.getEventByDate(tmp);
   }
   chooseDate(date){
     this.selectedData = {date:date.getDate(),month:date.getMonth(),year:date.getFullYear()};
@@ -56,6 +58,7 @@ export class CalendarComponent implements OnInit {
       .subscribe((event)=>{
         this.eventsData=event;
         this.filterEvents(this.userId);
+        this.selectedDataEvent = this.getEventByDate(this.currentDate);
       })
   }
   isReserved(date){
@@ -68,10 +71,15 @@ export class CalendarComponent implements OnInit {
       && event.date==date.getDate());
     return temp.length;
   }
+  isSelected(date){
+    return date.getMonth()===this.selectedData.month&&date.getDate()===this.selectedData.date&&date.getFullYear()===this.selectedData.year;
+  }
+  eventTypeClass(day){
+    return 'calendar__day--'+this.getEventByDate(day)['event_type'];
+  }
   getEventByDate(date){
     let temp;
     if(!this.eventsData || !this.eventsData.length) return [];
-
     temp = this.eventsData.filter((event)=>
       event.year==date.getFullYear()
       && event.month==date.getMonth()
