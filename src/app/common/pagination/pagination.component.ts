@@ -13,6 +13,7 @@ pagesAmount;
 @Input() currentPage;
 numbers = new Array(this.pagesAmount);
 @Input() category;
+@Input() city;
   constructor(private usersService:UsersService) { }
 
   ngOnInit() {

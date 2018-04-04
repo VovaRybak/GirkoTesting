@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'home', component: HomePageComponent  },
   { path: 'search', component: SearchPageComponent },
   { path: 'person/:id', component: PersonComponent},
-  { path: 'person/:id/calendar', canActivate:[AuthGuard], component: CalendarComponent},
+  { path: 'person/:id/calendar', /*canActivate:[AuthGuard],*/ component: CalendarComponent},
   {	path: 'auth', component: AuthComponent,
 	children: [
 		{	path: '', redirectTo: 'signup', pathMatch: 'full'},

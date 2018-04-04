@@ -1,8 +1,8 @@
 <div class="pagination-wraper">
-	<a href="" class="pagination__page" *ngFor="let number of numbers; let i = index" 
-		routerLinkActive="pagination__page--active" 
+	<a href="" class="pagination__page" *ngFor="let number of numbers; let i = index"
+		routerLinkActive="pagination__page--active"
 		[ngClass]="{'pagination__page--active': currentPage==(i+1)}"
-		routerLink="{{linkTo}}" 
-		[queryParams]="{category: category,page: number}"
+		routerLink="{{linkTo}}"
+		[queryParams]="{category: category,city: city,page: number}"
 	> {{number}} </a>
 </div>

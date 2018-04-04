@@ -6,10 +6,11 @@
 	}
 	&-wraper{
 		display: flex;
-		flex-directiom:row;
+    justify-content: center;
+		flex-direction:row;
 		flex-wrap:wrap;
 		width:75%;
-		margin:0 auto;		
+		margin:0 auto;
 	}
 	&-item-wraper{
 		position: relative;
@@ -46,14 +47,26 @@
 		height:100%;
 		width:100%;
 		transform: translate(50%,50%);
-		object-fit: cover;	
+		object-fit: cover;
 		&__play{
 			z-index:2;
 			opacity:0.7;
-
-			
 		}
 	}
+}
+@media screen and (max-width:1366px){
+  .media-list{
+    &-wraper{
+      width:90%;
+    }
+  }
+}
+@media screen and (max-width:1280px){
+  .media-list{
+    &-wraper{
+      width:95%;
+    }
+  }
 }
 /* .slider{
 	position:absolute;

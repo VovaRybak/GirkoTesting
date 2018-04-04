@@ -1,11 +1,12 @@
 <div class="container">
 	<div class="users-list-container">
-		
 
-		<div class="users-list__title">{{usersCategory}} на весілля в Україні</div>
+
+		<div class="users-list__title" *ngIf="usersData.length">{{pageTitle}}</div>
+    <div class="users-list__title" *ngIf="!usersData.length">За даним запитом нічого не знайдено</div>
 		<div class="user-list-wraper">
 			<app-user-list-item class="user-list__item" *ngFor='let user of usersData' [userData]="user"></app-user-list-item>
 		</div>
-		<app-pagination [linkTo]="'/search'" [category]='pageCategory' [currentPage]='currentPage' [itemsAmount] = 'amountItems' [perPage]='perPage'></app-pagination>
+		<app-pagination [linkTo]="'/search'" [category]='pageCategory' [city]="pageCity" [currentPage]='currentPage' [itemsAmount] = 'amountItems' [perPage]='perPage'></app-pagination>
 	</div>
 </div>

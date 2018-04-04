@@ -9,6 +9,7 @@
 }
 .container{
 	background-color: $mainGrey;
+  min-height:calc(100vh - 413px);
 }
 .users-list-container{
 	padding:20px;
